@@ -16,4 +16,5 @@ interface IMoviesService
     public function find($id): MovieDTO; //obligatorio que retorne un DTO
     public static function insert(MovieDTO $movie): bool; //obligatorio que retorne booleano
     public static function delete($id): bool; //obligatorio que retorne un bool
+    public static function update(int $id, MovieDTO $movie): bool;
 }

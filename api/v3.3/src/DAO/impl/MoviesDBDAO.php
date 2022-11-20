@@ -20,8 +20,6 @@ class MoviesDBDAO implements IMoviesDAO
     function read(): array
     {
         $result = array();
-        // $sql = "SELECT * FROM peliculas";
-        // $db_data = DB::select($sql);
         $db_data = DB::table('peliculas')->select('*')->get();
         foreach ($db_data as $movie) {
             $result[] = new MovieDTO(
@@ -37,11 +35,6 @@ class MoviesDBDAO implements IMoviesDAO
     function findById(int $id): MovieDTO
     {
         $result = null;
-
-        // $params = ["id" => $id];
-
-        // $sql = "SELECT * FROM peliculas WHERE id = :id LIMIT 1";
-        // $db_data = DB::selectOne($sql, $params);
         $db_data = DB::table('peliculas')->select('*')->find($id);
         $result = new MovieDTO(
             $db_data->id,
@@ -59,11 +52,6 @@ class MoviesDBDAO implements IMoviesDAO
 
     function delete(int $id): bool
     {
-
-        // $params = ["id" => $id];
-
-        // $sql = "SELECT * FROM peliculas WHERE id = :id LIMIT 1";
-        // $db_data = DB::selectOne($sql, $params);
         return DB::table('peliculas')->delete($id);
     }
 }
