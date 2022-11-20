@@ -1,0 +1,22 @@
+{
+  "name": "daw/practica2",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Santiago Benito",
+      "email": "bmsanti@hotmail.com"
+    }
+  ],
+  "require": {
+    "bramus/router": "~1.6",
+    "larapack/dd": "1.*",
+    "vlucas/phpdotenv": "^5.5"
+  }
+}

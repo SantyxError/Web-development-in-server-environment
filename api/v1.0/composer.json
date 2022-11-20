@@ -1,0 +1,21 @@
+{
+  "name": "santi/api",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Santiago Benito Maldonado",
+      "email": "sanbemal@fpmislata.com"
+    }
+  ],
+  "require": {
+    "bramus/router": "^1.6",
+    "larapack/dd": "^1.1"
+  }
+}
